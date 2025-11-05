@@ -47,21 +47,26 @@ for city in cities:
 
 # Count the number of unique countries
 
-'''
-Your code here
-
-'''
+for city in cities:
+    unique = set(city["country"])
+print("The number of unique countries")
+print(f"{len(unique)}")
 
 # Print the average temperature for all the cities in Germany
 
-'''
-Your code here
-
-'''
-
+print("Average temperature for all the cities in Germany")
+temps = []
+for city in cities:
+    if city['country'] == 'Germany':
+        temps.append(float(city['temperature']))
+print(sum(temps)/len(temps))
+print()
 # Print the max temperature for all the cities in Italy
 
-'''
-Your code here
-
-'''
+print("Max temperature for all the cities in Germany")
+temps = []
+for city in cities:
+    if city['country'] == 'Germany':
+        temps.append(float(city['temperature']))
+print(max(temps))
+print()
